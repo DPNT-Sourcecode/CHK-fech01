@@ -14,7 +14,8 @@ class FizzBuzz
       bools["fizz"] = true
     end
 
-    if num_as_string.count(num_as_string[1]) == num_as_string.length
+    if num_as_string[1].nil?
+    elsif num_as_string.count(num_as_string[1]) == num_as_string.length
       bools["deluxe"] = true
     end
 
@@ -22,9 +23,13 @@ class FizzBuzz
       result << key if value
     end
 
+    return num_as_string if result.empty?
+    result.join(" ")
+
   end
 
 end
+
 
 
 
