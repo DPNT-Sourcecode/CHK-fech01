@@ -110,11 +110,12 @@ class Checkout
       order.index(item)
     end
     while group_items.size/3 > 0
-      GOODS.each_pair do |key, price|
-        group_items.pop(3).each do |item|
+      group_items.pop(3).each do |item|
+        GOODS.each_pair do |key, price|
           value -= price if item == key
         end
       end
+      value += 45
     end
     value += quantity[:B]/2 * DEALS["BB"]
     value += quantity[:F]/ 3 * DEALS["FFF"]
@@ -135,11 +136,3 @@ class Checkout
     group_buy = quantity[:S] + quantity[:T] + quantity[:X] + quantity[:Y] + quantity[:Z]
   end
 end
-
-
-
-
-
-
-
-
