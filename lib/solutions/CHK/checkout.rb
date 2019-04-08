@@ -105,7 +105,11 @@ class Checkout
     end
 
     group_items = basket.split("").select {|item| ["S","T", "Y", "X", "Z"].include?(item)}
-    
+    # Z > Y = S = T > X
+    while group_items.size >= 3
+      if group_items.count("Z") > 0
+        group_items.pop
+    end
     value += quantity[:B]/2 * DEALS["BB"]
     value += quantity[:F]/ 3 * DEALS["FFF"]
     value += quantity[:H]/5 * DEALS["5H"]
@@ -120,6 +124,7 @@ class Checkout
   end
 
 end
+
 
 
 
