@@ -8,12 +8,7 @@ class Checkout
     GOODS.each_pair do |key, price|
       basket.split('').each do |item|
         return -1 unless GOODS.key?(item)
-        if item == key
-          value += price
-          quantity[key.to_s] += 1
-        end
-
-        
+        value += price if item == key
       end
     end
 
@@ -21,6 +16,7 @@ class Checkout
   end
 
 end
+
 
 
 
