@@ -22,11 +22,7 @@ class FizzBuzz
       bools["deluxe"] = true
     end
 
-    if num_as_string[1].nil?
-    elsif num_as_string.count(num_as_string[1]) == num_as_string.length
-      bools["fake"] = (number % 2 != 0)
-      bools["deluxe"] = true
-    end
+    bools["fake"] =  (bools["deluxe"] && number % 2 != 0)
 
     bools.each_pair do |key, value|
       result << key if value
@@ -38,6 +34,7 @@ class FizzBuzz
   end
 
 end
+
 
 
 
