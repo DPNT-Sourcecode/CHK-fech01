@@ -106,9 +106,10 @@ class Checkout
 
     group_items = basket.split("").select {|item| ["S","T", "Y", "X", "Z"].include?(item)}
     # Z > Y = S = T > X
-    while group_items.size >= 3
+    while group_items.size/3 >= 1
       while group_items.include?("Z")
-        num += 1 
+        value -= 21
+        group_items.delete_at(group_items.rindex("Z"))
       end
 
     end
@@ -126,6 +127,7 @@ class Checkout
   end
 
 end
+
 
 
 
