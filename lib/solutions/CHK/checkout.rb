@@ -103,6 +103,10 @@ class Checkout
       quantity[:R] -= 3
       quantity[:Q] -= 1
     end
+
+    group_buy = quanity[:S] + quanity[:T] + quanity[:X] + quanity[:Y] + quanity[:Z]
+
+    
     value += quantity[:B]/2 * DEALS["BB"]
     value += quantity[:F]/ 3 * DEALS["FFF"]
     value += quantity[:H]/5 * DEALS["5H"]
@@ -117,4 +121,5 @@ class Checkout
   end
 
 end
+
 
