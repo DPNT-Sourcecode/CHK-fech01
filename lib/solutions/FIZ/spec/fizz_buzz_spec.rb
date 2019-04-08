@@ -28,5 +28,3 @@ describe FizzBuzz do
     expect(a.fizz_buzz(51)).to eq "fizz buzz"
   end
 end
-
-
