@@ -3,7 +3,7 @@ class FizzBuzz
 
   def fizz_buzz(number)
     num_as_string = number.to_s
-    bools = { "fizz" => false , "buzz" => false, "deluxe" => false}
+    bools = { "fizz" => false , "buzz" => false, "fake" => false "deluxe" => false}
     result = []
 
     if number % 5 == 0 || num_as_string.include?("5")
@@ -16,6 +16,7 @@ class FizzBuzz
 
     if num_as_string[1].nil?
     elsif num_as_string.count(num_as_string[1]) == num_as_string.length
+      bools["fake"] = (number % 2 == 0)
       bools["deluxe"] = true
     end
 
@@ -29,3 +30,4 @@ class FizzBuzz
   end
 
 end
+
