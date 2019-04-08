@@ -14,6 +14,9 @@ class FizzBuzz
     end
 
 
+      if num_as_string.count(num_as_string[1]) == num_as_string.length
+
+
 
     if result["fizz"] && result["buzz"]
       "fizz buzz"
@@ -28,5 +31,6 @@ class FizzBuzz
   end
 
 end
+
 
 

@@ -40,6 +40,10 @@ describe FizzBuzz do
     expect(a.fizz_buzz(555)).to eq "fizz buzz deluxe"
   end
 
+  it "Returns fizz buzz deluxe given 555" do
+    expect(a.fizz_buzz(11)).to eq "deluxe"
+  end
 end
+
 
 
