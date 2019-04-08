@@ -9,9 +9,8 @@ class FizzBuzz
     elsif number % 3 == 0
       "fizz"
     else
-      number
+      "#{number}"
     end
   end
 
 end
-
