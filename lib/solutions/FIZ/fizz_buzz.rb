@@ -3,7 +3,8 @@ class FizzBuzz
 
   def fizz_buzz(number)
     num_as_string = number.to_s
-    result = { "fizz" => false , "buzz" => false}
+    result = { "fizz" => false , "buzz" => false, "deluxe" => false}
+
     if number % 5 == 0 || num_as_string.include?("5")
       result["buzz"] = true
     end
@@ -11,7 +12,9 @@ class FizzBuzz
     if number % 3 == 0 || num_as_string.include?("3")
       result["fizz"] = true
     end
-    
+
+
+
     if result["fizz"] && result["buzz"]
       "fizz buzz"
     elsif result["fizz"]
@@ -25,4 +28,5 @@ class FizzBuzz
   end
 
 end
+
 
