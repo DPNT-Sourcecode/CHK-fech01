@@ -2,9 +2,10 @@
 class Hello
 
   def hello(string)
-    "Hello World"
+    "Hello, World!"
   end
 
 end
+
 
 
