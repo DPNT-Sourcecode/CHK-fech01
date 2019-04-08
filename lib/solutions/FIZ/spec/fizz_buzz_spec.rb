@@ -44,6 +44,3 @@ describe FizzBuzz do
     expect(a.fizz_buzz(11)).to eq "deluxe"
   end
 end
-
-
-
