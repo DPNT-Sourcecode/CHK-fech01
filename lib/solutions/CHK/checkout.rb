@@ -27,7 +27,14 @@ class Checkout
            "Y" => 10,
            "Z" => 50,
            }
-  DEALS = {"AAA" => -20, "BB" => -15, "AAAAA" => -50, "EEB" => -30, "FFF"=> -10}
+  DEALS = {"AAA" => -20,
+           "BB" => -15,
+           "AAAAA" => -50,
+           "EEB" => -30,
+           "FFF"=> -10,
+           "5H" => -5,
+           "10H" => -10
+         }
   def checkout(basket)
     value = 0
     quantity = {A: 0,
@@ -77,11 +84,13 @@ class Checkout
     end
     value += quantity[:B]/2 * DEALS["BB"]
     value += quantity[:F]/ 3 * DEALS["FFF"]
-
+    value += quantity[:H]/5 * DEALS["5H"]
+    value += quantity[:H]/10 * DEALS["10H"]
     value
   end
 
 end
+
 
 
 

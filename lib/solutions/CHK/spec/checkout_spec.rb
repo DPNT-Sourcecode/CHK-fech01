@@ -185,7 +185,12 @@ describe Checkout do
       expect(shop.checkout("HHHHH")).to eq 45
     end
 
+    it "Returns 80 for 10 H" do
+      expect(shop.checkout("HHHHHHHHHH")).to eq 80
+    end
+
   end
 end
+
 
 
