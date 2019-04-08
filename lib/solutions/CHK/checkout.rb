@@ -36,7 +36,10 @@ class Checkout
            "10H" => -10,
            "2K" => -10,
            "NNNM" => -15,
-           "5P" => -50
+           "5P" => -50,
+           "3Q" => -10,
+           "RRRQ" => -30,
+           "4U" => -40
          }
   def checkout(basket)
     value = 0
@@ -91,16 +94,24 @@ class Checkout
       quantity[:N] -= 3
       quantity[:M] -= 1
     end
+
+    while (quantity[:R] / 3 > 0 && quantity[:Q] > 0) do
+      value += DEALS["RRRQ"]
+      quantity[:R] -= 3
+      quantity[:Q] -= 1
+    end
     value += quantity[:B]/2 * DEALS["BB"]
     value += quantity[:F]/ 3 * DEALS["FFF"]
     value += quantity[:H]/5 * DEALS["5H"]
     value += quantity[:H]/10 * DEALS["10H"]
     value += quantity[:K]/2 * DEALS["2K"]
     value += quantity[:P]/5 * DEALS["5P"]
+    value += quantity[:Q]/3 * DEALS["3Q"]
     value
   end
 
 end
+
 
 
 

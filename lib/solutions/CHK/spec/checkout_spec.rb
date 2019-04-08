@@ -205,8 +205,17 @@ describe Checkout do
       expect(shop.checkout("QQQ")).to eq 80
     end
 
+    it "Returns RRRQ for 150" do
+      expect(shop.checkout("RRRQ")).to eq 150
+    end
+
+    it "Returns 4U for 120" do
+      expect(shop.checkout("UUUU")).to eq 120
+    end
+
   end
 end
+
 
 
 
