@@ -34,7 +34,9 @@ class Checkout
            "FFF"=> -10,
            "5H" => -5,
            "10H" => -10,
-           "2K" => -10
+           "2K" => -10,
+           "NNNM" => -15,
+           "5P" => -50
          }
   def checkout(basket)
     value = 0
@@ -94,10 +96,12 @@ class Checkout
     value += quantity[:H]/5 * DEALS["5H"]
     value += quantity[:H]/10 * DEALS["10H"]
     value += quantity[:K]/2 * DEALS["2K"]
+    value += quantity[:P]/5 * DEALS["5P"]
     value
   end
 
 end
+
 
 
 
