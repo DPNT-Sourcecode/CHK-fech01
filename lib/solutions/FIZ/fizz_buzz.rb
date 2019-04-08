@@ -11,12 +11,12 @@ class FizzBuzz
     if number % 3 == 0 || num_as_string.include?("3")
       result["fizz"] = true
     end
-    p result
+    
     if result["fizz"] && result["buzz"]
       "fizz buzz"
     elsif result["fizz"]
       "fizz"
-    elsif result["bizz"]
+    elsif result["buzz"]
       "buzz"
     else
       num_as_string
@@ -25,3 +25,4 @@ class FizzBuzz
   end
 
 end
+
