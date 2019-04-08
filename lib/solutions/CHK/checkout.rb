@@ -10,18 +10,18 @@ class Checkout
         value += price if item == key
       end
     end
-    if basket.count("A")/5 > 0
+
       value += DEALS["AAAAA"] * (basket.count("A")/5)
-    end
-    if basket.count % 5 > 2
+    if basket.count("A") % 5 > 2
       value += DEALS["AAA"] * (basket.count("A")/3)
     end
 
-
+    if basket.count("E") > 0 && basket.count("E").count % 2 == 0 && 
     value += DEALS["BB"] * (basket.count("B")/2)
   end
 
 end
+
 
 
 
