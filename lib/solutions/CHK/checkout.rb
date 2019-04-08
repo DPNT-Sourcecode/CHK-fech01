@@ -105,7 +105,37 @@ class Checkout
     end
 
     # Z > Y = S = T > X
-    while group_buy/3 > 0
+    while group_buy()/3 > 0
+      group_buy
+      if quantity[:Z] > 0
+        i += 1
+        quantity[:Z] - 1
+        value -= 21
+      end
+
+      if quantity[:Y] > 0
+        i += 1
+        quantity[:Y] - 1
+        value -= 20
+      end
+
+      if quantity[:S] > 0
+        i += 1
+        quantity[:S] - 1
+        value -= 20
+      end
+
+      if quantity[:T] > 0
+        i += 1
+        quantity[:T] - 1
+        value -= 20
+      end
+
+      if quantity[:X] > 0
+        i += 1
+        quantity[:X] - 1
+        value -= 17
+      end
     end
     value += quantity[:B]/2 * DEALS["BB"]
     value += quantity[:F]/ 3 * DEALS["FFF"]
@@ -126,6 +156,7 @@ class Checkout
     group_buy = quantity[:S] + quantity[:T] + quantity[:X] + quantity[:Y] + quantity[:Z]
   end
 end
+
 
 
 
