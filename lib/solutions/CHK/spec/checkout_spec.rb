@@ -86,5 +86,16 @@ describe Checkout do
     it "Returns 80 for EEB" do
       expect(shop.checkout("EEB")).to eq 80
     end
+
+    it "Returns 330 for AAAAAAAA" do
+      expect(shop.checkout("AAAAAAAA")).to eq 330
+    end
+
+    it "Returns 330 for AAAAAAAAA" do 
+      expect(shop.checkout("AAAAAAAAA")).to eq 380
+    end
+
+
   end
 end
+

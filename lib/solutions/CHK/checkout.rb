@@ -13,10 +13,10 @@ class Checkout
 
       value += DEALS["AAAAA"] * (basket.count("A")/5)
     if basket.count("A") % 5 > 2
-      value += DEALS["AAA"] * (basket.count("A")/3)
+      value += DEALS["AAA"] * ((basket.count("A") % 5)/3)
     end
 
-    if basket.count("E") * 2 >= basket.count("B")
+    if basket.count("E") * 1 > basket.count("B")
       value += DEALS["EEB"] * basket.count("B")
     else
       value += DEALS["EEB"] * (basket.count("E")/2)
@@ -26,3 +26,4 @@ class Checkout
   end
 
 end
+
