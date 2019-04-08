@@ -32,32 +32,49 @@ describe Checkout do
     it "Returns an 100 for AA" do
       expect(shop.checkout("AA")).to eq 100
     end
-    it "Returns an 100 for AB" do
+    it "Returns an 80 for AB" do
       expect(shop.checkout("AB")).to eq 80
     end
-    it "Returns an 100 for AC" do
+    it "Returns an 70 for AC" do
       expect(shop.checkout("AC")).to eq 70
     end
-    it "Returns an 100 for AD" do
+    it "Returns an 65 for AD" do
       expect(shop.checkout("AD")).to eq 65
     end
-    it "Returns an 100 for BA" do
+    it "Returns an 80 for BA" do
       expect(shop.checkout("BA")).to eq 80
     end
-    it "Returns an 100 for AA" do
+    it "Returns an 50 for BC" do
       expect(shop.checkout("BC")).to eq 50
     end
-    it "Returns an 100 for AA" do
+    it "Returns an 45 for BD" do
       expect(shop.checkout("BD")).to eq 45
     end
   end
 
   context "Deals" do
-    it "Returns an 100 for AAA" do
+    it "Returns an 130 for AAA" do
       expect(shop.checkout("AAA")).to eq 130
+    end
+
+    it "Returns an 260 for AAA" do
+      expect(shop.checkout("AAAAAA")).to eq 260
+    end
+
+    it "Returns an 180 for AAA" do
+      expect(shop.checkout("AAAA")).to eq 180
+    end
+
+    it "Returns an 45 for BB" do
+      expect(shop.checkout("BB")).to eq 45
+    end
+
+    it "Returns an 75 for BBB" do
+      expect(shop.checkout("BBB")).to eq 75
     end
   end
 end
+
 
 
 
