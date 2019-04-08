@@ -39,7 +39,9 @@ class Checkout
            "5P" => -50,
            "3Q" => -10,
            "RRRQ" => -30,
-           "4U" => -40
+           "4U" => -40,
+           "2V" => -10,
+           "3V" => -20
          }
   def checkout(basket)
     value = 0
@@ -107,10 +109,14 @@ class Checkout
     value += quantity[:K]/2 * DEALS["2K"]
     value += quantity[:P]/5 * DEALS["5P"]
     value += quantity[:Q]/3 * DEALS["3Q"]
+    value += quantity[:U]/4 * DEALS["4U"]
+    value += quantity[:V]/ 3 * DEALS["3V"]
+    value += (quantity[:V] % 3 / 2) * DEALS["2V"]
     value
   end
 
 end
+
 
 
 

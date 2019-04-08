@@ -213,8 +213,17 @@ describe Checkout do
       expect(shop.checkout("UUUU")).to eq 120
     end
 
+    it "Returns 2V for 90" do
+      expect(shop.checkout("VV")).to eq 90
+    end
+
+    it "Returns 3V for 130" do
+      expect(shop.checkout("VVV")).to eq 130
+    end
+
   end
 end
+
 
 
 
