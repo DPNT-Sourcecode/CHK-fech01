@@ -104,9 +104,8 @@ class Checkout
       quantity[:Q] -= 1
     end
 
-    group_buy = quanity[:S] + quanity[:T] + quanity[:X] + quanity[:Y] + quanity[:Z]
+    group_items = basket.select {|item| ["S","T", "Y", "X", "Z"].include?(item)}
 
-    
     value += quantity[:B]/2 * DEALS["BB"]
     value += quantity[:F]/ 3 * DEALS["FFF"]
     value += quantity[:H]/5 * DEALS["5H"]
@@ -121,5 +120,6 @@ class Checkout
   end
 
 end
+
 
 
