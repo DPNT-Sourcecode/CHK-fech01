@@ -7,10 +7,9 @@ describe Checkout do
     it "Returns -1 for an invalid input a" do
       expect(shop.checkout("a")).to eq -1
     end
-    it "Returns -1 for an inzalid input Z" do
-      expect(shop.checkout("Z")).to eq -1
+    it "Returns -1 for an invalid input +" do
+      expect(shop.checkout("+")).to eq -1
     end
-
   end
 
   context "Single Items" do
@@ -36,13 +35,13 @@ describe Checkout do
       expect(shop.checkout("G")).to eq 20
     end
     it "Returns 10 for H" do
-      expect(shop.checkout("G")).to eq 10
+      expect(shop.checkout("H")).to eq 10
     end
     it "Returns 35 for I" do
-      expect(shop.checkout("G")).to eq 35
+      expect(shop.checkout("I")).to eq 35
     end
     it "Returns 60 for J" do
-      expect(shop.checkout("G")).to eq 60
+      expect(shop.checkout("J")).to eq 60
     end
     it "Returns 80 for K" do
       expect(shop.checkout("K")).to eq 80
@@ -182,6 +181,11 @@ describe Checkout do
       expect(shop.checkout("FFF")).to eq 20
     end
 
+    it "Returns 45 for 5H" do
+      expect(shop.checkout("HHHHH")).to eq 45
+    end
+
   end
 end
+
 
