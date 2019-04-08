@@ -104,13 +104,9 @@ class Checkout
       quantity[:Q] -= 1
     end
 
-    group_items = basket.split("").select {|item| ["S","T", "Y", "X", "Z"].include?(item)}
+    group_buy = quantity[:S] + quantity[:T] + quantity[:X] + quantity[:Y] + quantity[:Z] +
     # Z > Y = S = T > X
-    while group_items.size/3 >= 1
-      while group_items.include?("Z")
-        value -= 21
-        group_items.delete_at(group_items.rindex("Z"))
-      end
+    while group_buy(quantity) > 3
 
     end
     value += quantity[:B]/2 * DEALS["BB"]
@@ -127,10 +123,3 @@ class Checkout
   end
 
 end
-
-
-
-
-
-
-
