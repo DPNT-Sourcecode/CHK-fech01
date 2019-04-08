@@ -91,11 +91,25 @@ describe Checkout do
       expect(shop.checkout("AAAAAAAA")).to eq 330
     end
 
-    it "Returns 330 for AAAAAAAAA" do 
+    it "Returns 330 for AAAAAAAAA" do
       expect(shop.checkout("AAAAAAAAA")).to eq 380
     end
+
+    it "Returns 160 for EEEEBB" do
+      expect(shop.checkout("EEEEBB")).to eq 160
+    end
+
+    it "Returns 160 for BEBEEE" do
+      expect(shop.checkout("BEBEEE")).to eq 160
+    end
+
+    it "Returns 160 for ABCDEABCDE" do
+      expect(shop.checkout("ABCDEABCDE")).to eq 280
+    end
+
 
 
   end
 end
+
 
