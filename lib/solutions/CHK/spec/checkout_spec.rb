@@ -189,8 +189,17 @@ describe Checkout do
       expect(shop.checkout("HHHHHHHHHH")).to eq 80
     end
 
+    it "Returns 2K for 150" do
+      expect(shop.checkout("KK")).to eq 150
+    end
+
+    it "Returns NNNM for 120" do
+      expect(shop.checkout("NNNM")).to eq 120
+    end
+
   end
 end
+
 
 
 
