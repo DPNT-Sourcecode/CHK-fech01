@@ -7,10 +7,10 @@ describe Checkout do
     it "Returns -1 for an invalid input a" do
       expect(shop.checkout("a")).to eq -1
     end
-
-    it "Returns -1 for an invalid input F" do
-      expect(shop.checkout("F")).to eq 10
+    it "Returns -1 for an inzalid input Z" do
+      expect(shop.checkout("Z")).to eq -1
     end
+
   end
 
   context "Single Items" do
@@ -30,7 +30,7 @@ describe Checkout do
       expect(shop.checkout("E")).to eq 40
     end
 
-    it "Returns an 10 for F" do
+    it "Returns 10 for F" do
       expect(shop.checkout("F")).to eq 10
     end
   end
@@ -125,4 +125,5 @@ describe Checkout do
 
   end
 end
+
 
