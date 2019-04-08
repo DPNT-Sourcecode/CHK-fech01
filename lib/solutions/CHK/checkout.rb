@@ -17,13 +17,15 @@ class Checkout
 
     value += quantity[:A]/ 5 * DEALS["AAAAA"]
     value += (quantity[:A] % 5 / 3) * DEALS["AAA"]
-    if quantity[:E]/quantity[:B] >= 2
-      value += quantity[:B] * DEALS["EEB"]
+    for quantity[:B] do
+      
     end
+
     value
   end
 
 end
+
 
 
 
