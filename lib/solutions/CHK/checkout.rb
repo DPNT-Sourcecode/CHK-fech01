@@ -8,14 +8,21 @@ class Checkout
     GOODS.each_pair do |key, price|
       basket.split('').each do |item|
         return -1 unless GOODS.key?(item)
-        value += price if item == key
+        if item == key
+          value += price
+          quantity[key.to_sym] += 1
+        end
       end
     end
+
+    value += (quantity[:A]/5 * DEALS["AAAAA"])
+    value
 
 
   end
 
 end
+
 
 
 
