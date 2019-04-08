@@ -9,7 +9,7 @@ describe Checkout do
     end
 
     it "Returns -1 for an invalid input F" do
-      expect(shop.checkout("F")).to eq -1
+      expect(shop.checkout("F")).to eq 10
     end
   end
 
@@ -28,6 +28,10 @@ describe Checkout do
     end
     it "Returns an 40 for E" do
       expect(shop.checkout("E")).to eq 40
+    end
+
+    it "Returns an 10 for F" do
+      expect(shop.checkout("F")).to eq 10
     end
   end
 
@@ -55,6 +59,10 @@ describe Checkout do
     end
     it "Returns an 80 for EE" do
       expect(shop.checkout("EE")).to eq 80
+    end
+
+    it "Returns an 20 for FF" do
+      expect(shop.checkout("FF")).to eq 20
     end
   end
 
@@ -111,7 +119,10 @@ describe Checkout do
       expect(shop.checkout("BBBEE")).to eq 125
     end
 
-
+    it "Returns an 20 for FFF" do
+      expect(shop.checkout("FFF")).to eq 20
+    end
 
   end
 end
+

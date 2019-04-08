@@ -1,10 +1,10 @@
 # noinspection RubyUnusedLocalVariable
 class Checkout
-  GOODS = {"A" => 50, "B" => 30, "C" => 20, "D"=> 15, "E"=> 40}
-  DEALS = {"AAA" => -20, "BB" => -15, "AAAAA" => -50, "EEB" => -30}
+  GOODS = {"A" => 50, "B" => 30, "C" => 20, "D"=> 15, "E"=> 40, "F"=> 10}
+  DEALS = {"AAA" => -20, "BB" => -15, "AAAAA" => -50, "EEB" => -30, "FFF"=> -10}
   def checkout(basket)
     value = 0
-    quantity = {A: 0, B: 0, C: 0, D: 0, E: 0}
+    quantity = {A: 0, B: 0, C: 0, D: 0, E: 0, F: 0}
     GOODS.each_pair do |key, price|
       basket.split('').each do |item|
         return -1 unless GOODS.key?(item)
@@ -24,11 +24,12 @@ class Checkout
       quantity[:E] -=2
     end
     value += quantity[:B]/2 * DEALS["BB"]
-
+    value += quantity[:F]/ 3 * DEALS["FFF"]
 
     value
   end
 
 end
+
 
 
