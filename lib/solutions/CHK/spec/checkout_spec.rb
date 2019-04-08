@@ -51,7 +51,14 @@ describe Checkout do
       expect(shop.checkout("BD")).to eq 45
     end
   end
+
+  context "Deals" do
+    it "Returns an 100 for AAA" do
+      expect(shop.checkout("AAA")).to eq 130
+    end
+  end
 end
+
 
 
 

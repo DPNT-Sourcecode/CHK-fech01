@@ -3,14 +3,16 @@ class Checkout
   GOODS = {"A" => 50, "B" => 30, "C" => 20, "D"=> 15}
   def checkout(basket)
     value = 0
-    GOODS.each_pair do |key, value|
-      basket.each do |item|
+    GOODS.each_pair do |key, price|
+      basket.split('').each do |item|
+        value += price if item == key
       end
     end
-    -1
+    value == 0 ?  -1 : value
   end
 
 end
+
 
 
 
