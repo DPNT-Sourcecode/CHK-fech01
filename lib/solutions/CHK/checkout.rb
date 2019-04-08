@@ -103,14 +103,14 @@ class Checkout
       quantity[:R] -= 3
       quantity[:Q] -= 1
     end
-
+    group_items = basket.split("").select{|item| ["S","T","X","Y","Z"].include?(item)}
     # Z > Y = S = T > X
-    while group_buy(quantity)/3 > 0
-      value -= 21 * quantity[:Z]
-      value -= 21 * quantity[:Y]
-      value -= 21 * quantity[:S]
-      value -= 21 * quantity[:T]
-      value -= 21 * quantity[:X]
+    while group_items.size/3 > 0
+      GOODS.each_pair do |key, price|
+        group_items.pop(3).each do |item|
+          value -= price if item == key
+        end
+      end
     end
     value += quantity[:B]/2 * DEALS["BB"]
     value += quantity[:F]/ 3 * DEALS["FFF"]
@@ -131,6 +131,7 @@ class Checkout
     group_buy = quantity[:S] + quantity[:T] + quantity[:X] + quantity[:Y] + quantity[:Z]
   end
 end
+
 
 
 
