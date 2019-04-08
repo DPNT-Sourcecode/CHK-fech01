@@ -34,14 +34,15 @@ class Checkout
            "FFF"=> -10,
            "5H" => -5,
            "10H" => -10,
-           "2K" => -10,
+           "2K" => -20,
            "NNNM" => -15,
            "5P" => -50,
            "3Q" => -10,
            "RRRQ" => -30,
            "4U" => -40,
            "2V" => -10,
-           "3V" => -20
+           "3V" => -20,
+           "3STXYZ" => 45
          }
   def checkout(basket)
     value = 0
@@ -116,3 +117,4 @@ class Checkout
   end
 
 end
+
