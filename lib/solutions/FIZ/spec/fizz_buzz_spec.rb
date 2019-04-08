@@ -27,4 +27,14 @@ describe FizzBuzz do
   it "Returns fizzbuzz when given 51" do
     expect(a.fizz_buzz(51)).to eq "fizz buzz"
   end
+
+  it "Returns fizzbuzz when given 51" do
+    expect(a.fizz_buzz(55)).to eq "buzz deluxe"
+  end
+
+  it "Returns fizzbuzz when given 51" do
+    expect(a.fizz_buzz(33)).to eq "fizz deluxe"
+  end
+
 end
+
