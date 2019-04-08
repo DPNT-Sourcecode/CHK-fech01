@@ -1,6 +1,13 @@
 # noinspection RubyUnusedLocalVariable
 class Checkout
-  GOODS = {"A" => 50, "B" => 30, "C" => 20, "D"=> 15, "E"=> 40, "F"=> 10}
+  GOODS = {"A" => 50,
+           "B" => 30,
+           "C" => 20,
+           "D" => 15,
+           "E" => 40,
+           "F" => 10,
+           "G" => 20,
+         }
   DEALS = {"AAA" => -20, "BB" => -15, "AAAAA" => -50, "EEB" => -30, "FFF"=> -10}
   def checkout(basket)
     value = 0
@@ -30,3 +37,4 @@ class Checkout
   end
 
 end
+
