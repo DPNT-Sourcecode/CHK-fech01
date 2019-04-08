@@ -221,6 +221,34 @@ describe Checkout do
       expect(shop.checkout("VVV")).to eq 130
     end
 
+    context "Buy any 3 of (S, T, X, Y, Z) for 45" do
+      it "Returns STX for 45" do
+        expect(shop.checkout("STX")).to eq 45
+      end
+      it "Returns STY for 45" do
+        expect(shop.checkout("STY")).to eq 45
+      end
+      it "Returns STZ for 45" do
+        expect(shop.checkout("STZ")).to eq 45
+      end
+      it "Returns TXY for 45" do
+        expect(shop.checkout("TXY")).to eq 45
+      end
+
+      it "Retursn SSS for 45" do
+        expect(shop.checkout("SSS")).to eq 45
+      end
+
+      it "Retursn SSSS for 45" do
+        expect(shop.checkout("SSSS")).to eq 65
+      end
+
+      it "Retursn SSS for 45" do
+        expect(shop.checkout("SSS")).to eq 45
+      end
+    end
+
   end
 end
+
 
