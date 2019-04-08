@@ -30,6 +30,3 @@ class Checkout
   end
 
 end
-
-
-

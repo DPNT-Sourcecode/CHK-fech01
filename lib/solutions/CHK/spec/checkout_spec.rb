@@ -53,6 +53,33 @@ describe Checkout do
     it "Returns 15 for M" do
       expect(shop.checkout("M")).to eq 15
     end
+    it "Returns 40 for N" do
+      expect(shop.checkout("N")).to eq 40
+    end
+    it "Returns O for 10" do
+      expect(shop.checkout("O")).to eq 10
+    end
+    it "Returns 50 for P" do
+      expect(shop.checkout("P")).to eq 50
+    end
+    it "Returns 30 for Q" do
+      expect(shop.checkout("Q")).to eq 30
+    end
+    it "Returns 50 for R" do
+      expect(shop.checkout("R")).to eq 50
+    end
+    it "Returns 30 for S" do
+      expect(shop.checkout("S")).to eq 30
+    end
+    it "Returns 20 for T" do
+      expect(shop.checkout("T")).to eq 20
+    end
+    it "Returns 40 for U" do
+      expect(shop.checkout("U")).to eq 40
+    end
+    it "Returns 50 for V" do
+      expect(shop.checkout("V")).to eq 50
+    end
   end
 
   context "Multiple different items" do
@@ -145,6 +172,3 @@ describe Checkout do
 
   end
 end
-
-
-
