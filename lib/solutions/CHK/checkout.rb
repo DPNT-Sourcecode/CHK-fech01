@@ -4,16 +4,23 @@ class Checkout
   DEALS = {"AAA" => -20, "BB" => -15, "AAAAA" => -50, "EEB" => -30}
   def checkout(basket)
     value = 0
+    quantity = {A: 0, B: 0, C: 0, D: 0, E: 0}
     GOODS.each_pair do |key, price|
       basket.split('').each do |item|
         return -1 unless GOODS.key?(item)
-        value += price if item == key
+        if item == key
+          value += price
+          quantity[key.to_s] += 1
+        end
+
+        
       end
     end
 
-    
+
   end
 
 end
+
 
 

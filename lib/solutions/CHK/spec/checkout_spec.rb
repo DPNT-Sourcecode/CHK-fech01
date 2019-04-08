@@ -107,9 +107,14 @@ describe Checkout do
       expect(shop.checkout("ABCDEABCDE")).to eq 280
     end
 
+    it "Returns 125 for BBBEE" do
+      expect(shop.checkout("BBBEE")).to eq 125
+    end
+
 
 
   end
 end
+
 
 
