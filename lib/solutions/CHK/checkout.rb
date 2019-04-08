@@ -104,10 +104,11 @@ class Checkout
       quantity[:Q] -= 1
     end
 
-    group_buy = quantity[:S] + quantity[:T] + quantity[:X] + quantity[:Y] + quantity[:Z] +
     # Z > Y = S = T > X
-    while group_buy(quantity) > 3
-
+    while group_buy(quantity) >= 3
+      while quantity[:Z] > 0
+        quantity[:Z] - 1
+      end
     end
     value += quantity[:B]/2 * DEALS["BB"]
     value += quantity[:F]/ 3 * DEALS["FFF"]
@@ -122,4 +123,10 @@ class Checkout
     value
   end
 
+  private
+
+  def group_buy(quantity)
+    group_buy = quantity[:S] + quantity[:T] + quantity[:X] + quantity[:Y] + quantity[:Z]
+  end
 end
+
