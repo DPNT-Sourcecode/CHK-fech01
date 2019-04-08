@@ -1,4 +1,4 @@
-require "fizz_buzz"
+require "./fizz_buzz"
 
 describe FizzBuzz do
   a = FizzBuzz.new
@@ -24,4 +24,16 @@ describe FizzBuzz do
     expect(a.fizz_buzz(52)).to eq "buzz"
   end
 
+  it "Returns fizz when given 35" do
+    expect(a.fizz_buzz(52)).to eq "buzz"
+  end
+
+  it "Returns fizz when given 35" do
+    expect(a.fizz_buzz(52)).to eq "buzz"
+  end
+
+  it "Returns fizzbuzz when given 51" do
+    expect(a.fizz_buzz(51)).to eq "fizz buzz"
+  end
 end
+
