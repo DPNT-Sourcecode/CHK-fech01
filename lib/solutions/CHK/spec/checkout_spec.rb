@@ -29,9 +29,29 @@ describe Checkout do
     it "Returns an 40 for E" do
       expect(shop.checkout("E")).to eq 40
     end
-
     it "Returns 10 for F" do
       expect(shop.checkout("F")).to eq 10
+    end
+    it "Returns 20 for G" do
+      expect(shop.checkout("G")).to eq 20
+    end
+    it "Returns 10 for H" do
+      expect(shop.checkout("G")).to eq 10
+    end
+    it "Returns 35 for I" do
+      expect(shop.checkout("G")).to eq 35
+    end
+    it "Returns 60 for J" do
+      expect(shop.checkout("G")).to eq 60
+    end
+    it "Returns 80 for K" do
+      expect(shop.checkout("K")).to eq 80
+    end
+    it "Returns 90 for L" do
+      expect(shop.checkout("L")).to eq 90
+    end
+    it "Returns 15 for M" do
+      expect(shop.checkout("M")).to eq 15
     end
   end
 
@@ -125,5 +145,6 @@ describe Checkout do
 
   end
 end
+
 
 
