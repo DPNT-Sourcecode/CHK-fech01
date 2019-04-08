@@ -16,12 +16,13 @@ class Checkout
       value += DEALS["AAA"] * (basket.count("A")/3)
     end
 
-    if basket.count("E") > 0 && basket.count("E").count % 2 == 0 && 
+    if basket.count("E") * 2 >= basket.count("B")
+      value += DEALS["EEB"] * basket.count("B")
+    else
+      value += DEALS["EEB"] * (basket.count("E")/2)
+    end
+
     value += DEALS["BB"] * (basket.count("B")/2)
   end
 
 end
-
-
-
-
