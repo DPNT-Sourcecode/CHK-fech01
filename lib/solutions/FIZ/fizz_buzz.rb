@@ -10,8 +10,16 @@ class FizzBuzz
       bools["buzz"] = true
     end
 
+    if number % 5 == 0 && num_as_string.include?("5")
+      bools["deluxe"] = true
+    end
+
     if number % 3 == 0 || num_as_string.include?("3")
       bools["fizz"] = true
+    end
+
+    if number % 3 == 0 && num_as_string.include?("3")
+      bools["deluxe"] = true
     end
 
     if num_as_string[1].nil?
@@ -30,5 +38,6 @@ class FizzBuzz
   end
 
 end
+
 
 

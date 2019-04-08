@@ -2,14 +2,14 @@ require "./fizz_buzz"
 
 describe FizzBuzz do
   a = FizzBuzz.new
-  it "Returns fizz when given 3" do
+  it "Returns fizz fake deluxe when given 3" do
     expect(a.fizz_buzz(3)).to eq "fizz fake deluxe"
   end
-  it "Returns buzz when given 5" do
+  it "Returns buzz fake deluxe when given 5" do
     expect(a.fizz_buzz(5)).to eq "buzz fake deluxe"
   end
-  it "Returns fizz buzz when given 15" do
-    expect(a.fizz_buzz(15)).to eq "fizz buzz deluxe"
+  it "Returns fizz buzz fake deluxe when given 15" do
+    expect(a.fizz_buzz(15)).to eq "fizz buzz fake deluxe"
   end
 
   it "Returns 1 when given 1" do
@@ -45,6 +45,7 @@ describe FizzBuzz do
   end
 
 end
+
 
 
 
