@@ -105,6 +105,10 @@ class Checkout
     end
     group_items = basket.split("").select{|item| ["S","T","X","Y","Z"].include?(item)}
     # Z > Y = S = T > X
+    order = ["X", "S", "T", "Y", "Z"]
+    group_items.sort_by! do |item|
+      order.index(item)
+    end
     while group_items.size/3 > 0
       GOODS.each_pair do |key, price|
         group_items.pop(3).each do |item|
@@ -131,6 +135,7 @@ class Checkout
     group_buy = quantity[:S] + quantity[:T] + quantity[:X] + quantity[:Y] + quantity[:Z]
   end
 end
+
 
 
 
