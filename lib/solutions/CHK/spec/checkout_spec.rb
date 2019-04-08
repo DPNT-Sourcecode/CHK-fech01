@@ -43,8 +43,8 @@ describe Checkout do
     it "Returns 60 for J" do
       expect(shop.checkout("J")).to eq 60
     end
-    it "Returns 80 for K" do
-      expect(shop.checkout("K")).to eq 80
+    it "Returns 70 for K" do
+      expect(shop.checkout("K")).to eq 70
     end
     it "Returns 90 for L" do
       expect(shop.checkout("L")).to eq 90
@@ -67,8 +67,8 @@ describe Checkout do
     it "Returns 50 for R" do
       expect(shop.checkout("R")).to eq 50
     end
-    it "Returns 30 for S" do
-      expect(shop.checkout("S")).to eq 30
+    it "Returns 20 for S" do
+      expect(shop.checkout("S")).to eq 20
     end
     it "Returns 20 for T" do
       expect(shop.checkout("T")).to eq 20
@@ -82,14 +82,14 @@ describe Checkout do
     it "Returns 20 for W" do
       expect(shop.checkout("W")).to eq 20
     end
-    it "Returns 90 for X" do
-      expect(shop.checkout("X")).to eq 90
+    it "Returns 17 for X" do
+      expect(shop.checkout("X")).to eq 17
     end
-    it "Returns 10 for Y" do
-      expect(shop.checkout("Y")).to eq 10
+    it "Returns 20 for Y" do
+      expect(shop.checkout("Y")).to eq 20
     end
-    it "Returns 50 for Z" do
-      expect(shop.checkout("Z")).to eq 50
+    it "Returns 21 for Z" do
+      expect(shop.checkout("Z")).to eq 21
     end
   end
 
@@ -190,7 +190,7 @@ describe Checkout do
     end
 
     it "Returns 2K for 150" do
-      expect(shop.checkout("KK")).to eq 150
+      expect(shop.checkout("KK")).to eq 120
     end
 
     it "Returns NNNM for 120" do
@@ -223,3 +223,4 @@ describe Checkout do
 
   end
 end
+
